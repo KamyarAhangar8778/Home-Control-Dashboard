@@ -4,21 +4,12 @@ import React from "react";
 import { motion } from "motion/react";
 import { ArrowUpLeft, Compass, House, Layers3, Settings2, Wifi } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import SettingsPortalButton from "./components/SettingsPortalButton";
-import ModulesPortalButton from "./components/ModulesPortalButton";
 
 export interface WelcomePortalProps {
-  setIsMenuOpen: (val: boolean) => void;
-  setIsModulesMenuOpen: (val: boolean) => void;
-  accent3?: string;
-  accent4?: string;
   animationsEnabled?: boolean;
-  isDark?: boolean;
 }
 
 export default function WelcomePortal({
-  setIsMenuOpen,
-  setIsModulesMenuOpen,
   animationsEnabled = true,
 }: WelcomePortalProps) {
   return (
@@ -56,14 +47,11 @@ export default function WelcomePortal({
                 <span className="text-[var(--accent3)]">یکپارچه و ساده</span>
               </CardTitle>
               <CardDescription className="max-w-xl text-sm leading-7 text-[var(--text-secondary)] sm:text-base sm:leading-8">
-                چراغ‌ها، ماژول‌ها و اتوماسیون‌های خانه را از یک فضای کاری مدیریت کنید. برای شروع، تنظیمات ارتباط را بررسی کنید یا ماژول‌های خود را اضافه کنید.
+                چراغ‌ها، ماژول‌ها و اتوماسیون‌های خانه را از یک فضای کاری مدیریت کنید.
               </CardDescription>
             </div>
 
-            <CardContent className="flex flex-col gap-3 p-0 pt-1 sm:flex-row sm:flex-wrap">
-              <SettingsPortalButton onClick={() => setIsMenuOpen(true)} />
-              <ModulesPortalButton onClick={() => setIsModulesMenuOpen(true)} />
-            </CardContent>
+            <CardContent className="p-0 pt-1" />
           </CardHeader>
 
           <aside className="relative flex min-h-52 flex-col justify-between overflow-hidden border-t border-[var(--border-color)] bg-[var(--bg-main)] p-5 sm:p-7 lg:border-r lg:border-t-0 lg:p-8">
