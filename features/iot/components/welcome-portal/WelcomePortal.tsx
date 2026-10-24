@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { ArrowUpLeft, Compass, House, Layers3, Settings2, Wifi } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export interface WelcomePortalProps {
   animationsEnabled?: boolean;
@@ -51,7 +51,6 @@ export default function WelcomePortal({
               </CardDescription>
             </div>
 
-            <CardContent className="p-0 pt-1" />
           </CardHeader>
 
           <aside className="relative flex min-h-52 flex-col justify-between overflow-hidden border-t border-[var(--border-color)] bg-[var(--bg-main)] p-5 sm:p-7 lg:border-r lg:border-t-0 lg:p-8">
