@@ -30,7 +30,7 @@ export default function DashboardBreadcrumb() {
   const ActiveIcon = viewIcons[activeView];
 
   return (
-    <Breadcrumb dir="rtl" className="mb-5 px-1">
+    <Breadcrumb dir="rtl" className="mt-3 mb-5 px-1 md:mt-5">
       <BreadcrumbList className="gap-2 text-[var(--text-secondary)]">
         <BreadcrumbItem>
           <BreadcrumbLink
