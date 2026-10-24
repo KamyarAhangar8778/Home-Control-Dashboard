@@ -32,11 +32,6 @@ export default function DashboardWorkspace() {
   } = useDashboard();
 
   const activeWorkspaceView = useIoTStore(s => s.activeWorkspaceView);
-  const isDark = useIoTStore(s => s.isDark);
-  const accent3 = useIoTStore(s => s.accent3);
-  const accent4 = useIoTStore(s => s.accent4);
-  const setIsMenuOpen = useIoTStore(s => s.setIsMenuOpen);
-  const setIsModulesMenuOpen = useIoTStore(s => s.setIsModulesMenuOpen);
   const animationsEnabled = useIoTStore(s => s.animationsEnabled);
   const activeSegmentId = useIoTStore(s => s.activeSegmentId);
   const activeGroupId = useIoTStore(s => s.activeGroupId);
@@ -74,12 +69,7 @@ export default function DashboardWorkspace() {
           </div>
         ) : segmentsLength === 0 ? (
           <React.Suspense fallback={<div className="w-full h-96 flex items-center justify-center"><div className="w-12 h-12 rounded-full border-2 border-[var(--accent3)] border-t-transparent animate-spin" /></div>}><WelcomePortal
-            setIsMenuOpen={setIsMenuOpen}
-            setIsModulesMenuOpen={setIsModulesMenuOpen}
-            accent3={accent3}
-            accent4={accent4}
             animationsEnabled={animationsEnabled}
-            isDark={isDark}
           /></React.Suspense>
         ) : (
           <div className="w-full flex flex-col gap-4">
